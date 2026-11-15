@@ -80,3 +80,19 @@ docker rmi taskflow-livewire
 ## Attribution
 
 This is an original project written by the repository owner. Built with [Laravel](https://laravel.com) and [Livewire](https://livewire.laravel.com), both open source under the MIT license.
+
+## Run with Docker Compose (recommended)
+
+```bash
+docker compose up -d --build
+```
+
+Open **http://localhost:8000**. Data is persisted in a Docker volume (`taskflow-data`).
+
+```bash
+# Stop (data is kept)
+docker compose down
+
+# Stop and delete data
+docker compose down -v
+```

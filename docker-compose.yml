@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: taskflow-livewire
+    container_name: taskflow
+    ports:
+      - "8000:8000"
+    volumes:
+      - taskflow-data:/var/www/html/database
+    restart: unless-stopped
+
+volumes:
+  taskflow-data:
